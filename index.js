@@ -23,5 +23,8 @@ app.get('/', (req, res) => {
 
 // Start the server
 app.listen(5000, () => {
-  console.log('Server started on port 3000');
+  console.log('Server started on port 5000');
 });
+
+// Export the Express API
+module.exports = app;
