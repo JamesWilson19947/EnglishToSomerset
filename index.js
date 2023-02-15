@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const somersetize = require('./somersetize');
+const somersetize = require('/somersetize');
 
 const app = express();
 
