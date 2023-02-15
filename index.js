@@ -18,7 +18,7 @@ app.post('/somersetize', (req, res) => {
 
 // Serve index.html at root path
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/index.html');
+  res.sendFile(__dirname + '/public/index.html');
 });
 
 // Start the server
