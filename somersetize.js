@@ -1,5 +1,5 @@
-const dictionary = require('./translations/dictionary.json');
-const randomSayings = require('./translations/somersetSayings.json');
+const dictionary = require('/translations/dictionary.json');
+const randomSayings = require('/translations/somersetSayings.json');
 
 const somersetize = (input) => {
   console.log(input)
