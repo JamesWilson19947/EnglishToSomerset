@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Somersetizer</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <form id="somersetizer-form">
+            <div class="form-group">
+              <label for="input">Enter text to Somersetize:</label>
+              <textarea class="form-control" id="" id="input" name="input" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Somersetize</button>
+          </form>
+          <div class="hero">
+           
+          </div>
+          <div class="container py-1 mb-1 bg-light rounded-3 ">
+            <div class="p-5 mb-4 lc-block">
+              <h5> Output:</h5>
+              <div class="lc-block col-md-12">
+                <div editable="rich">
+                  <div id="output" class="mt-5"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const form = document.getElementById('somersetizer-form');
+      const outputDiv = document.getElementById('output');
+
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+
+        const input = event.target.input.value;
+
+        const response = await fetch('/somersetize', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ input })
+        });
+
+        const data = await response.json();
+
+        outputDiv.innerText = data.output;
+      });
+    </script>
+  </body>
+</html>
