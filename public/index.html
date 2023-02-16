@@ -2,32 +2,25 @@
 <html>
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Somersetizer</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   </head>
   <body>
     <div class="container mt-5">
       <div class="row">
-        <div class="col-md-6 mx-auto">
+        <div class="col-md-12 col-lg-12 mx-auto">
           <form id="somersetizer-form">
             <div class="form-group">
+              <h1> Somersetize </h1>
               <label for="input">Enter text to Somersetize:</label>
-              <textarea class="form-control" id="" id="input" name="input" rows="3"></textarea>
+              <textarea class="form-control" id="input" name="input" rows="5"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Somersetize</button>
+            <button type="submit" class="btn btn-primary btn-block">Somersetize</button>
           </form>
-          <div class="hero">
-           
-          </div>
-          <div class="container py-1 mb-1 bg-light rounded-3 ">
-            <div class="p-5 mb-4 lc-block">
-              <h5> Output:</h5>
-              <div class="lc-block col-md-12">
-                <div editable="rich">
-                  <div id="output" class="mt-5"></div>
-                </div>
-              </div>
-            </div>
+          <div class="mt-5">
+            <h5> Output:</h5>
+            <div id="output"></div>
           </div>
         </div>
       </div>
